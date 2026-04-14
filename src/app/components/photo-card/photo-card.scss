@@ -1,0 +1,10 @@
+@use '../../../assets/styles/palette';
+
+:host {
+  width: 136px;
+  height: 136px;
+
+  background-color: palette.$light_red;
+
+  border: 1px solid;
+}
