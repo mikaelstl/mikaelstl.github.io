@@ -1,0 +1,17 @@
+@use '../../../assets/styles/palette';
+
+:host {
+  display: flex;
+
+  padding: 8px;
+
+  background-color: palette.$details;
+  border-radius: 9999px;
+
+  width: fit-content;
+  height: fit-content;
+}
+
+:host ::ng-deep ng-icon svg {
+  color: palette.$gray;
+}

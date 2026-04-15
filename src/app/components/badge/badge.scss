@@ -1,0 +1,14 @@
+@use '../../../assets/styles/palette';
+
+:host {
+  grid-area: prtfl-badge;
+
+  display: flex;
+
+  padding: 6px 12px;
+  border-radius: 4px;
+
+  width: fit-content;
+
+  background-color: palette.$details;
+}

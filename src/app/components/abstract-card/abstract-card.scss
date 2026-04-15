@@ -1,0 +1,52 @@
+@use '../../../assets/styles/palette';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 30px;
+
+  background-color: palette.$items;
+
+  width: fit-content;
+  height: 100%;
+
+  border-radius: 12px;
+
+  .prtfl-me {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 30px;
+
+    border-bottom: 2px solid palette.$details;
+
+    height: fit-content;
+    
+    .prtfl-badges {
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  .prtfl-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    height: 100%;
+
+    border-bottom: 2px solid palette.$details;
+  }
+
+  .prtfl-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: fit-content;
+  }
+}

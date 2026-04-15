@@ -1,0 +1,7 @@
+@use '../../../../assets/styles/palette';
+
+:host {
+  color: palette.$gray;
+  font-size: 16px;
+  font-weight: 300;
+}

@@ -6,17 +6,14 @@ import { SectionTitle } from "./components/base/section-title/section-title";
 import { SimpleText } from "./components/base/simple-text/simple-text";
 import { MediumText } from "./components/base/medium-text/medium-text";
 import { PhotoCard } from "./components/photo-card/photo-card";
+import { AbstractCard } from "./components/abstract-card/abstract-card";
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
     Screen,
-    SimpleTitle,
-    SectionTitle,
-    SimpleText,
-    MediumText,
-    PhotoCard
+    AbstractCard
 ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

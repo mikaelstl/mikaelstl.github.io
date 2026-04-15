@@ -8,7 +8,10 @@ import { Component } from '@angular/core';
   `,
   styles: `
     .prtfl-medium-text {
-      font-size: 16px;
+      grid-area: medium-text;
+
+      color: white;
+      font-size: 18px;
       font-weight: 500;
     }
   `,

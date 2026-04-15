@@ -4,11 +4,12 @@ import { Component } from '@angular/core';
   selector: 'simple-title',
   imports: [],
   template: `
-    <h3 class="prtfl-simple-title"><ng-content/></h3>
+    <h2 class="prtfl-simple-title"><ng-content/></h2>
   `,
   styles: `
     .prtfl-simple-title {
-      font-size: 18px;
+      grid-area: prtfl-title;
+      color: white;
       font-weight: 600;
     }
   `,

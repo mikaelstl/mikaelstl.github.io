@@ -1,0 +1,9 @@
+<ng-icon [name]="icon" size="32"/>
+<medium-subtitle>{{title}}</medium-subtitle>
+<a
+  [href]='link'
+  [attr.target]="type === 'github' ? '_blank' : null"
+  rel="noopener noreferrer"
+>
+  <medium-text>{{value}}</medium-text>
+</a>

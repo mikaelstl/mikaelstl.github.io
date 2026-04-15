@@ -1,1 +1,9 @@
-<p>photo-card works!</p>
+@if (image || image !== '') {
+  <img [src]="image">
+} @else {
+  <ng-icon
+    class="image-corrupted-file"
+    name="solarFileCorruptedBoldDuotone"
+    size="32"
+  />
+}

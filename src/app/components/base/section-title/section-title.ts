@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   `,
   styles: `
     .prtfl-section-title {
+      color: white;
       font-weight: 600;
     }
   `,
