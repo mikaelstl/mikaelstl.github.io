@@ -1,4 +1,12 @@
 :host {
+  display: block;
+  overflow: hidden;
+
+  main {
+    display: block;
+  overflow: hidden;
+  }
+
   .prtfl-content {
     display: grid;
     grid-template-areas:
@@ -8,6 +16,7 @@
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     gap: 20px;
+    column-gap: 40px;
 
     justify-items: end;
 
@@ -26,7 +35,6 @@
     overflow: auto;
   
     width: 100%;
-    border: 1px solid blue;
   }
 }
 

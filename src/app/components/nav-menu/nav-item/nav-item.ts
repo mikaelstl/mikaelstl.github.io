@@ -1,15 +1,16 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { SimpleText } from "../../base/simple-text/simple-text";
-import { ContentPages } from '../nav-bar/nav-bar';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+
+type ContentPages = 'about' | 'resume' | 'projects'
 
 @Component({
   selector: 'nav-item',
-  imports: [SimpleText],
+  imports: [SimpleText, RouterLink, RouterLinkActive],
   templateUrl: './nav-item.html',
   styleUrl: './nav-item.scss',
 })
-export class NavItem implements OnInit {
+export class NavItem {
 
   constructor(private router: Router) {}
 
@@ -17,15 +18,7 @@ export class NavItem implements OnInit {
 
   @Input() key: ContentPages = 'about';
 
-  visible: boolean = false;
-
-  ngOnInit(): void {
-    const actualPage = this.router.url;
-
-    if (this.key === actualPage) {
-      this.visible = true;
-    } else {
-      this.visible = false;
-    }
+  go(page: ContentPages) {
+    this.router.navigate([`${page}`]);
   }
 }

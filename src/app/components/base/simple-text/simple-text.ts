@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   `,
   styles: `
     .prtfl-simple-text {
+      grid-area: prtfl-simple-text;
+
       color: white;
       font-size: 16px;
       font-weight: 300;

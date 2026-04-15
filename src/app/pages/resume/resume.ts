@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { SectionTitle } from "../../components/base/section-title/section-title";
 
 @Component({
-  selector: 'app-resume',
-  imports: [],
+  selector: 'resume',
+  imports: [SectionTitle],
   templateUrl: './resume.html',
   styleUrl: './resume.scss',
 })

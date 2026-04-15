@@ -1,8 +1,17 @@
-<button class="prtfl-nav-item" type="button">
+<button
+  class="prtfl-nav-item"
+  type="button"
+  (click)="go(key)"
+
+  [routerLink]="key"
+  routerLinkActive="active"
+
+  #rla="routerLinkActive"
+>
   <div class="nav-icon">
-    <ng-content/>
+    <ng-content select="ng-icon"/>
   </div>
-  @if (visible) {
+  @if (rla.isActive) {
     <simple-text>{{label}}</simple-text>
   }
 </button>

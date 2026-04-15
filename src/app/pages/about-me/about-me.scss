@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px;
+
+  .prtfl-specialties {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .cards {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}

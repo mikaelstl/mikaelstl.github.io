@@ -5,8 +5,6 @@ import { solarCaseMinimalisticDuotone, solarFileTextDuotone, solarInfoCircleDuot
 import { NavItem } from "../nav-item/nav-item";
 import { Router } from '@angular/router';
 
-export type ContentPages = 'about' | 'resume' | 'projects'
-
 @Component({
   selector: 'nav-bar',
   standalone: true,
@@ -24,17 +22,4 @@ export type ContentPages = 'about' | 'resume' | 'projects'
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.scss',
 })
-export class NavBar {
-  constructor(
-    private readonly router: Router
-  ) { }
-
-  page: ContentPages = 'about';
-
-  go(page: ContentPages) {
-    console.log(`go to ${page}`);
-    this.page = page;
-    this.router.navigate([`${page}`]);
-  }
-
-}
+export class NavBar {}
