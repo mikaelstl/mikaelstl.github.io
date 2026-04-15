@@ -1,6 +1,8 @@
 @use '../../../assets/styles/palette';
 
 :host {
+  grid-area: prtfl-abstract;
+
   display: flex;
   flex-direction: column;
   gap: 20px;

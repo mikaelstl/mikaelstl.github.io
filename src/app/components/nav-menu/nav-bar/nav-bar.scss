@@ -1,0 +1,20 @@
+@use '../../../../assets/styles/palette';
+
+:host {
+  grid-area: prtfl-navbar;
+
+  height: fit-content;
+  width: fit-content;
+
+  nav {
+    display: flex;
+    gap: 10px;
+
+    padding: 8px;
+    border-radius: 9999px;
+
+    background-color: palette.$items;
+
+    width: fit-content;
+  }
+}

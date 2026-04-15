@@ -7,13 +7,15 @@ import { SimpleText } from "./components/base/simple-text/simple-text";
 import { MediumText } from "./components/base/medium-text/medium-text";
 import { PhotoCard } from "./components/photo-card/photo-card";
 import { AbstractCard } from "./components/abstract-card/abstract-card";
+import { NavBar } from "./components/nav-menu/nav-bar/nav-bar";
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
     Screen,
-    AbstractCard
+    AbstractCard,
+    NavBar
 ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

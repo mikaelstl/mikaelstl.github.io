@@ -1,12 +1,32 @@
 :host {
   .prtfl-content {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-areas:
+      "prtfl-abstract prtfl-navbar"
+      "prtfl-abstract prtfl-infos"
+    ;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
 
-    width: 100%;
+    justify-items: end;
+
+    width: 90%;
     height: 100%;
 
     padding: 36px 0px;
+  }
+
+  .prtfl-infos {
+    grid-area: prtfl-infos;
+    
+    flex: 1 1 auto;
+    display: flex;
+
+    overflow: auto;
+  
+    width: 100%;
+    border: 1px solid blue;
   }
 }
 
