@@ -14,6 +14,10 @@
   }
 
   .section-point-track-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     .point {
       background-color: palette.$details;
 
@@ -31,6 +35,15 @@
         height: 10px;
 
         border-radius: 9999px;
+      }
+    }
+
+    .track {
+      &.visible {
+        width: 1px;
+        height: 100%;
+
+        background-color: palette.$details;
       }
     }
   }

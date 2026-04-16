@@ -8,8 +8,8 @@ import { HighlightedText } from "../../base/highlighted-text/highlighted-text";
   imports: [
     MediumText,
     SimpleText,
-    HighlightedText
-],
+    HighlightedText,
+  ],
   templateUrl: './resume-item.html',
   styleUrl: './resume-item.scss',
 })
@@ -21,6 +21,6 @@ export class ResumeItem {
 
   @Input() description: string = '';
 
-  @Input() track: 'visible' | 'hidden' = 'hidden';
+  @Input() track: boolean = false;
 
 }

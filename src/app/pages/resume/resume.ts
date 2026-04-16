@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { SectionTitle } from "../../components/base/section-title/section-title";
 import { ResumeSection } from "../../components/resume-infos/resume-section/resume-section";
 import { NgIcon, provideIcons } from "@ng-icons/core";
-import { solarCaseRoundDuotone, solarDiplomaDuotone } from '@ng-icons/solar-icons/duotone';
+import { solarCaseRoundDuotone, solarDiplomaDuotone, solarUserCheckDuotone } from '@ng-icons/solar-icons/duotone';
 
 @Component({
   selector: 'resume',
@@ -14,7 +14,8 @@ import { solarCaseRoundDuotone, solarDiplomaDuotone } from '@ng-icons/solar-icon
   providers: [
     provideIcons({
       solarDiplomaDuotone,
-      solarCaseRoundDuotone
+      solarCaseRoundDuotone,
+      solarUserCheckDuotone
     })
   ],
   templateUrl: './resume.html',

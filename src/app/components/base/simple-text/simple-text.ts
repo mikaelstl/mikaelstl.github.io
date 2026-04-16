@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
       grid-area: prtfl-simple-text;
 
       color: white;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 300;
     }
   `,

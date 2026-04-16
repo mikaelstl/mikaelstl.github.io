@@ -9,7 +9,7 @@
       [title]="item.title"
       [info]="item.info"
       [description]="item.description"
-      bottomTrack=""
+      [track]="$index+1 !== values.length"
     />
   }
 </div>
