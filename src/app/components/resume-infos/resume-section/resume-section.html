@@ -1,0 +1,15 @@
+<div class="section-icon">
+  <ng-content select="ng-icon"/>
+</div>
+<div class="section-track"></div>
+<simple-title>{{title}}</simple-title>
+<div class="items-container">
+  @for (item of values; track $index) {
+    <resume-item
+      [title]="item.title"
+      [info]="item.info"
+      [description]="item.description"
+      bottomTrack=""
+    />
+  }
+</div>

@@ -5,12 +5,8 @@ import { Component } from '@angular/core';
   imports: [],
   template: `
     <h1 class="prtfl-section-title"><ng-content/></h1>
+    <div class="title-detail"></div>
   `,
-  styles: `
-    .prtfl-section-title {
-      color: white;
-      font-weight: 600;
-    }
-  `,
+  styleUrl: './section-title.scss',
 })
 export class SectionTitle {}

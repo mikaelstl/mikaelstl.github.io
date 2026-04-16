@@ -8,13 +8,16 @@
   gap: 20px;
 
   padding: 30px;
+  padding-bottom: 20px;
 
   background-color: palette.$items;
 
   width: fit-content;
-  height: 100%;
+  height: fit-content;
 
   border-radius: 12px;
+
+  overflow: auto;
 
   .prtfl-me {
     display: flex;
@@ -41,6 +44,7 @@
 
     height: 100%;
 
+    padding-bottom: 60px;
     border-bottom: 2px solid palette.$details;
   }
 

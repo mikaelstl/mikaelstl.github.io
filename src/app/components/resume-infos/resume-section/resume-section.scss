@@ -1,0 +1,45 @@
+@use '../../../../assets/styles/palette';
+
+:host {
+  display: grid;
+  grid-template-areas:
+    "prtfl-icon            prtfl-title"
+    "prtfl-section-track   ."
+    "prtfl-items-container prtfl-items-container"
+  ;
+  grid-template-columns: auto 1fr;
+  column-gap: 20px;
+
+  align-items: center;
+
+  .section-icon {
+    display: flex;
+
+    padding: 10px;
+    border-radius: 8px;
+
+    background-color: palette.$items;
+
+    width: fit-content;
+    height: min-content;
+
+    &::ng-deep ng-icon svg {
+      color: palette.$light_red;
+    }
+  }
+
+  .items-container {
+    grid-area: prtfl-items-container;
+  }
+
+  .section-track {
+    grid-area: prtfl-section-track;
+
+    background-color: palette.$details;
+
+    width: 1px;
+    height: 30px;
+
+    margin-left: 50%;
+  }
+}

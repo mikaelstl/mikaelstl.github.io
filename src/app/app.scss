@@ -1,10 +1,12 @@
 :host {
-  display: block;
-  overflow: hidden;
+  display: flex;
+  height: fit-content;
 
   main {
     display: block;
-  overflow: hidden;
+    overflow: hidden;
+
+    height: 100vh
   }
 
   .prtfl-content {
@@ -23,7 +25,7 @@
     width: 90%;
     height: 100%;
 
-    padding: 36px 0px;
+    margin: 36px;
   }
 
   .prtfl-infos {
@@ -31,8 +33,6 @@
     
     flex: 1 1 auto;
     display: flex;
-
-    overflow: auto;
   
     width: 100%;
   }
