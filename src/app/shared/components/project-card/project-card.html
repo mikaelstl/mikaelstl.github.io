@@ -1,0 +1,10 @@
+<a [href]="link">
+  <div class="project-infos">
+    <medium-text>{{formattedTitle}}</medium-text>
+    <simple-text>{{description}}</simple-text>
+  </div>
+  <div class="project-badges">
+    <project-badge type="tech"   [label]="tech" />
+    <project-badge type="date"   [label]="formattedDate"/>
+  </div>
+</a>

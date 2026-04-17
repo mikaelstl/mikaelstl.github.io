@@ -1,0 +1,42 @@
+@use 'palette';
+
+:host {
+  grid-area: prtfl-nav-item;
+
+  .prtfl-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background-color: palette.$details;
+
+    padding: 6px;
+    border-radius: 9999px;
+
+    simple-text {
+      padding-right: 12px;
+    }
+
+    .nav-icon {
+      display: flex;
+      align-items: center;
+
+      padding: 8px;
+      border-radius: 9999px;
+
+      &::ng-deep ng-icon svg {
+        color: palette.$gray;
+      }
+    }
+
+    &.active {
+      .nav-icon {
+        background-color: palette.$light_red;
+
+        &::ng-deep ng-icon svg {
+          color: white;
+        }
+      }
+    }
+  }
+}

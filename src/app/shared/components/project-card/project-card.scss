@@ -1,0 +1,36 @@
+@use 'palette';
+
+:host {
+  padding: 14px;
+
+  width: 100%;
+  min-width: 280px;
+
+  min-height: 160px;
+
+  border: 1px solid palette.$details;
+  border-radius: 12px;
+
+  background-color: palette.$items;
+
+  .project-badges {
+    display: flex;
+    gap: 16px;
+  }
+
+  .project-infos {
+    overflow: hidden;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    height: 100%;
+
+    gap: 20px;
+    text-decoration: none;
+  }
+}

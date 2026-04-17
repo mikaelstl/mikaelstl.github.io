@@ -1,2 +1,12 @@
 <section-title>Projetos</section-title>
-<project-card/>
+<div class="projects-container">
+  @for (project of projects; track $index) {
+    <project-card
+      [link]="project.html_url"
+      [name]="project.name"
+      [description]="project.description"
+      [tech]="project.language"
+      [updated_at]="project.updated_at"
+    />
+  }
+</div>

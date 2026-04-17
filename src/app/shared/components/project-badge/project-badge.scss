@@ -1,0 +1,11 @@
+:host {
+  display: grid;
+  grid-template-areas:
+    "prtfl-icon prtfl-text"
+  ;
+  gap: 4px;
+
+  &::ng-deep ng-icon svg {
+    color: white;
+  }
+}

@@ -1,0 +1,7 @@
+@use 'palette';
+
+:host {
+  color: palette.$gray;
+  font-size: 14px;
+  font-weight: 300;
+}

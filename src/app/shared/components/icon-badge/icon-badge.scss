@@ -1,0 +1,18 @@
+@use 'palette';
+
+:host {
+  padding: 8px;
+  background-color: palette.$details;
+  border-radius: 9999px;
+
+  a {
+    display: flex;
+
+    width: fit-content;
+    height: min-content;
+  }
+}
+
+:host ::ng-deep ng-icon svg {
+  color: palette.$gray;
+}

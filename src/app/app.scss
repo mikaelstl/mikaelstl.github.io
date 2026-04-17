@@ -22,12 +22,11 @@
 
     justify-items: end;
 
-    width: 90%;
     height: 100%;
 
-    margin: 36px;
+    padding: 36px;
   }
-
+  
   .prtfl-infos {
     grid-area: prtfl-infos;
     
@@ -35,6 +34,8 @@
     display: flex;
   
     width: 100%;
+
+    padding-bottom: 36px;
   }
 }
 

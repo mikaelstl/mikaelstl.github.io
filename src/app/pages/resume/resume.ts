@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SectionTitle } from "../../components/base/section-title/section-title";
-import { ResumeSection } from "../../components/resume-infos/resume-section/resume-section";
+import { SectionTitle } from "@components/base/section-title/section-title";
+import { ResumeSection } from "@components/resume-infos/resume-section/resume-section";
 import { NgIcon, provideIcons } from "@ng-icons/core";
 import { solarCaseRoundDuotone, solarDiplomaDuotone, solarUserCheckDuotone } from '@ng-icons/solar-icons/duotone';
 

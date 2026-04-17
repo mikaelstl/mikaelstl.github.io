@@ -1,9 +1,0 @@
-:host {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-
-  &::ng-deep ng-icon svg {
-    color: white;
-  }
-}

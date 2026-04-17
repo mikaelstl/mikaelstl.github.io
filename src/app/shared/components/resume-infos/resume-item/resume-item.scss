@@ -1,0 +1,50 @@
+@use 'palette';
+
+:host {
+  grid-area: prtfl-resume-item;
+
+  display: flex;
+  gap: 12px;
+
+  padding: 0px 19px;
+
+  .infos-container {
+    display: grid;
+    gap: 10px;
+  }
+
+  .section-point-track-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .point {
+      background-color: palette.$details;
+
+      padding: 4px;
+
+      width: fit-content;
+      height: fit-content;
+
+      border-radius: 9999px;
+
+      .inner-point {
+        background-color: palette.$light_red;
+
+        width: 10px;
+        height: 10px;
+
+        border-radius: 9999px;
+      }
+    }
+
+    .track {
+      &.visible {
+        width: 1px;
+        height: 100%;
+
+        background-color: palette.$details;
+      }
+    }
+  }
+}
