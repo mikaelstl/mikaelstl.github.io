@@ -23,7 +23,10 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "outputPath": "docs",
+            "outputPath": {
+              "base": "docs",
+              "browser": "."
+            },
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/assets/styles"
