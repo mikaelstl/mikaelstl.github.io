@@ -1,12 +1,18 @@
 <section-title>Projetos</section-title>
-<div class="projects-container">
-  @for (project of projects; track $index) {
-    <project-card
-      [link]="project.html_url"
-      [name]="project.name"
-      [description]="project.description"
-      [tech]="project.language"
-      [updated_at]="project.updated_at"
-    />
-  }
-</div>
+@if (projects$ | async; as projects) {
+  <div class="projects-container">
+    @for (project of projects; track $index) {
+      <project-card
+        [link]="project.html_url"
+        [name]="project.name"
+        [description]="project.description"
+        [tech]="project.language"
+        [updated_at]="project.updated_at"
+      />
+    }
+  </div>
+} @else {
+  <div class="spinner-container">
+    <div class="spinner"></div>
+  </div>
+}

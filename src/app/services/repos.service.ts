@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
-import { Observable, of } from "rxjs";
+import { map, Observable, of, tap } from "rxjs";
 
 /* 
   {
@@ -39,23 +39,52 @@ export interface RepoI {
   providedIn: 'root'
 })
 export class ReposService {
-  
+
   private readonly http: HttpClient = inject(HttpClient);
-  
-  private readonly baseUrl = 'https://api.github.com/repos/mikaelstl'
+
+  private readonly baseUrl = 'https://api.github.com/users/mikaelstl/repos'
 
   private readonly CACHE_EXPIRATION = 24 * 60 * 60 * 1000;
 
   public readonly CACHE_KEY = 'github_repos_cache';
 
-  public get(repo: string): Observable<RepoI> {
-    return this.http.get<RepoI>(`${this.baseUrl}/${repo}`);
+  private readonly REPOS: string[] = [
+    'tasker_api',
+    'tasker_app',
+    'komik-web',
+    'komik',
+    'portals_api',
+    'portals_msmail',
+    'portals_msboxoffice',
+  ]
+
+  public fetch() {
+    const cache = this.fetchFromCache();
+
+    if (!this.isEmpty(cache)) {
+      return this.toObservable(cache);
+    }
+
+    return this.fetchFromAPI().pipe(
+      map( data => 
+        data.filter(repo => this.REPOS.includes(repo.name))
+      ),
+      tap( data => this.setCache(data) )
+    )
   }
 
-  getCache(): Observable<RepoI[]> | null {
+  private fetchFromAPI(): Observable<RepoI[]> {
+    console.log('fetching repos from api');
+
+    return this.http.get<RepoI[]>(this.baseUrl);
+  }
+
+  private fetchFromCache(): RepoI[] {
+    console.log('fetching repos from cache');
+
     const raw = localStorage.getItem(this.CACHE_KEY);
 
-    if (!raw) return null;
+    if (!raw) return [];
 
     const { data, timestamp }: CacheI = JSON.parse(raw);
 
@@ -63,18 +92,26 @@ export class ReposService {
 
     if (expired) {
       localStorage.removeItem(this.CACHE_KEY);
-      return null;
+      return [];
     }
-    
+
+    return data;
+  }
+
+  private toObservable(data: RepoI[]): Observable<RepoI[]> {
     return of(data);
   }
 
-  setCache(data: RepoI[]) {
+  private setCache(data: RepoI[]) {
     const cache: CacheI = {
       data,
       timestamp: Date.now()
     }
 
     localStorage.setItem(this.CACHE_KEY, JSON.stringify(cache));
+  }
+
+  private isEmpty(data: RepoI[]): boolean {
+    return !data || data?.length === 0;
   }
 }

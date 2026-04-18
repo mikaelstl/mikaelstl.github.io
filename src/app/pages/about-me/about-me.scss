@@ -4,9 +4,15 @@
 
   gap: 40px;
 
+  height: min-content;
+
+  .about-infos {
+    display: grid;
+    gap: 20px;
+  }
+
   .prtfl-specialties {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 12px;
 
     .cards {
