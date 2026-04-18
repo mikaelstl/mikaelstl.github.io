@@ -5,10 +5,9 @@
 
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 
-  padding: 30px;
-  padding-bottom: 20px;
+  padding: 20px;
 
   background-color: palette.$items;
 
@@ -21,23 +20,28 @@
 
   .prtfl-me {
     display: flex;
-    gap: 20px;
     flex-direction: column;
     align-items: center;
+
+    gap: 20px;
 
     padding-bottom: 30px;
 
     border-bottom: 2px solid palette.$details;
 
     height: fit-content;
-    
+
     .prtfl-badges {
+      grid-area: prtfl-profile-badges;
+
       display: flex;
       gap: 8px;
     }
   }
 
   .prtfl-contact {
+    grid-area: prtfl-contact;
+
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -49,10 +53,63 @@
   }
 
   .prtfl-socials {
+    grid-area: prtfl-socials;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
     height: fit-content;
+  }
+}
+
+@media (max-width: 970px) {
+  :host {
+    width: 100%;
+    height: fit-content;
+
+    padding: 10px;
+
+    .prtfl-me {
+      position: relative;
+
+      display: grid;
+      grid-template-areas:
+        "prtfl-photo prtfl-title"
+        "prtfl-photo prtfl-profile-badges"
+      ;
+      grid-template-columns: min-content auto;
+      
+      row-gap: 0px;
+
+      align-items: center;
+
+      height: fit-content;
+
+      padding-bottom: 10px;
+
+      .show-contact-btn {
+        position: absolute;
+
+        display: block;
+
+        padding: 2px;
+
+        top: 0px;
+        right: 0px;
+
+        margin: 0;
+
+        background: none;
+
+        &::ng-deep ng-icon svg {
+          color: white;
+        }
+      }
+    }
+
+    .prtfl-contact {
+      padding-bottom: 30px;
+    }
   }
 }

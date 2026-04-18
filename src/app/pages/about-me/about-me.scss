@@ -25,3 +25,26 @@
     }
   }
 }
+
+@media (max-width: 970px) {
+  :host {
+    gap: 20px;
+
+    width: 100%;
+    height: fit-content;
+
+    .prtfl-specialties {
+      display: grid;
+      gap: 12px;
+
+      height: fit-content;
+
+      .cards {
+        display: grid;
+        gap: 10px;
+
+        height: 100%;
+      }
+    }
+  }
+}

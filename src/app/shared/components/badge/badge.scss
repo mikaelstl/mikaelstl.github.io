@@ -11,4 +11,13 @@
   width: fit-content;
 
   background-color: palette.$details;
+
+  color: white;
+  font-size: 14px;
+}
+
+@media ( max-width: 970px ) {
+  :host {
+    font-size: 12px;
+  }
 }

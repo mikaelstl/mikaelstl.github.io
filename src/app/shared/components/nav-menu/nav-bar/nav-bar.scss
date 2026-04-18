@@ -7,8 +7,11 @@
   width: fit-content;
 
   nav {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     gap: 10px;
+
+    justify-items: center;
 
     padding: 8px;
     border-radius: 9999px;
@@ -16,5 +19,29 @@
     background-color: palette.$items;
 
     width: fit-content;
+  }
+}
+
+@media (max-width: 970px) {
+  :host {
+    position: fixed;
+
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 9999;
+
+    width: 100%;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      
+      border-top: 1px solid palette.$light_red;
+      border-radius: 0px;
+
+      width: 100%;
+    }
   }
 }

@@ -3,9 +3,7 @@ import { SimpleText } from "../base/simple-text/simple-text";
 
 @Component({
   selector: 'badge',
-  imports: [
-    SimpleText
-  ],
+  imports: [],
   templateUrl: './badge.html',
   styleUrl: './badge.scss',
 })
